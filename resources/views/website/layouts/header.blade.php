@@ -3,7 +3,7 @@
         @php
             $siteSettings = DB::table('site_settings')->first();
         @endphp
-      <a class="navbar-brand text_color" href="#">
+      <a class="navbar-brand text_color" href="{{ route('home') }}">
         <img src="{{ asset($siteSettings->logo) }}" alt="" style="height: 45px; width:45px;">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

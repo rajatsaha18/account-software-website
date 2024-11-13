@@ -49,8 +49,14 @@ Home
                                             stroke-linejoin="round" />
                                     </svg></div>
                             </div>
+                            @php
+                                $products = DB::table('products')->count();
+                                $clients = DB::table('clients')->count();
+                                $blogs = DB::table('blogs')->count();
+                                $usermessages = DB::table('contacts')->count();
+                            @endphp
                             <div class="flex-grow-1 ms-3">
-                                <h6 class="mb-0">All Earnings</h6>
+                                <h6 class="mb-0">Total Products</h6>
                             </div>
                             <div class="flex-shrink-0 ms-3">
                                 <div class="dropdown"><a
@@ -70,8 +76,8 @@ Home
                                     <div id="all-earnings-graph"></div>
                                 </div>
                                 <div class="col-5">
-                                    <h5 class="mb-1">$3,020</h5>
-                                    <p class="text-primary mb-0"><i class="ti ti-arrow-up-right"></i> 30.6%</p>
+                                    <h5 class="mb-1">{{ $products }}</h5>
+
                                 </div>
                             </div>
                         </div>
@@ -101,7 +107,7 @@ Home
                                     </svg></div>
                             </div>
                             <div class="flex-grow-1 ms-3">
-                                <h6 class="mb-0">Page Views</h6>
+                                <h6 class="mb-0">Total Clients</h6>
                             </div>
                             <div class="flex-shrink-0 ms-3">
                                 <div class="dropdown"><a
@@ -121,8 +127,8 @@ Home
                                     <div id="page-views-graph"></div>
                                 </div>
                                 <div class="col-5">
-                                    <h5 class="mb-1">290K+</h5>
-                                    <p class="text-warning mb-0"><i class="ti ti-arrow-up-right"></i> 30.6%</p>
+                                    <h5 class="mb-1">{{ $clients }}</h5>
+
                                 </div>
                             </div>
                         </div>
@@ -164,7 +170,7 @@ Home
                                     </svg></div>
                             </div>
                             <div class="flex-grow-1 ms-3">
-                                <h6 class="mb-0">Total Task</h6>
+                                <h6 class="mb-0">Total Blogs</h6>
                             </div>
                             <div class="flex-shrink-0 ms-3">
                                 <div class="dropdown"><a
@@ -184,8 +190,8 @@ Home
                                     <div id="total-task-graph"></div>
                                 </div>
                                 <div class="col-5">
-                                    <h5 class="mb-1">839</h5>
-                                    <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i> New</p>
+                                    <h5 class="mb-1">{{ $blogs }}</h5>
+
                                 </div>
                             </div>
                         </div>
@@ -209,7 +215,7 @@ Home
                                     </svg></div>
                             </div>
                             <div class="flex-grow-1 ms-3">
-                                <h6 class="mb-0">Download</h6>
+                                <h6 class="mb-0">Total Users</h6>
                             </div>
                             <div class="flex-shrink-0 ms-3">
                                 <div class="dropdown"><a
@@ -229,8 +235,8 @@ Home
                                     <div id="download-graph"></div>
                                 </div>
                                 <div class="col-5">
-                                    <h5 class="mb-1">2,067</h5>
-                                    <p class="text-danger mb-0"><i class="ti ti-arrow-up-right"></i> 30.6%</p>
+                                    <h5 class="mb-1">{{ $usermessages }}</h5>
+
                                 </div>
                             </div>
                         </div>
