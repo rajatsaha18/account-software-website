@@ -12,14 +12,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
           <li class="nav-item">
-            <a class="nav-link active text_color" aria-current="page" href="{{ route('home') }}">Home</a>
+            <a class="nav-link active text_color" aria-current="page" href="{{ route('home') }}"><i class="fa-solid fa-house"></i> Home</a>
           </li>
           {{-- <li class="nav-item">
             <a class="nav-link active text_color" href="#">About</a>
           </li> --}}
           <li class="nav-item active dropdown">
             <a class="nav-link dropdown-toggle text_color" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Products
+                <i class="fa-solid fa-address-card"></i> Products
             </a>
             @php
                 $products = DB::table('products')->where('status',1)->get();
@@ -34,10 +34,10 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text_color" href="{{ route('blog') }}">Blog</a>
+            <a class="nav-link active text_color" href="{{ route('blog') }}"> <i class="fa-solid fa-newspaper"></i> Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text_color" href="{{ route('contact') }}">Contact</a>
+            <a class="nav-link active text_color" href="{{ route('contact') }}"><i class="fa-solid fa-address-book"></i> Contact</a>
           </li>
         </ul>
         <form action="{{ route('blog.search') }}" method="GET" class="d-flex" role="search">
