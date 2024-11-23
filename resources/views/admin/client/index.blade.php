@@ -18,8 +18,10 @@ Add Client
             <section class="py-2">
                 <div class="container">
                     <div class="row">
-                        <h4 class="text-center text-success">{{ Session::get('message') }}</h4>
-                        <div class="col-md-6 mx-auto">
+                        <div class="col-md-8 mx-auto">
+                            <div class="text-end">
+                                <a href="{{ route('client.manage') }}" class="btn btn-success mb-2">Manage Client</a>
+                            </div>
                             <div class="card">
                                 <div class="card-header">Add Client</div>
                                 <div class="card-body">

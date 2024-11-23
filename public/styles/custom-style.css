@@ -1,0 +1,276 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar-color {
+    background-color: #4834d4;
+
+}
+.text_color{
+    color: white!important;
+}
+
+.image-size {
+    height: 180px !important;
+    width: 100% !important;
+}
+.image-size-product {
+    height: 250px !important;
+}
+
+.carousel-item img {
+    margin: auto;
+}
+
+.bg-footer-color {
+    background-color: #4834d4 !important;
+}
+
+
+
+@media (max-width: 768px) {
+    .image-size {
+        height: 150px !important;
+    }
+}
+
+/*===============Slider client================*/
+/* Keyframes for smooth scrolling animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7)); /* Adjust based on number of slides */
+    }
+}
+
+/* Slider container */
+.slider {
+    margin: auto;
+    overflow: hidden; /* Hide overflow for smooth sliding */
+    position: relative;
+    width: 100%; /* Full width of the container */
+    height: 150px; /* Adjust height for the slider */
+    display: flex;
+    justify-content: center; /* Centers the slider horizontally */
+    align-items: center; /* Centers slider content vertically */
+}
+
+/* Track for sliding the elements */
+.slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite; /* Smooth infinite scroll */
+    width: calc(250px * 14); /* Adjust width based on number of slides */
+}
+
+/* Individual slides */
+.slider .slide {
+    flex: 0 0 250px; /* Set fixed width of each slide */
+    margin-right: 20px; /* Add spacing between slides */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* Image styling (centered in the slide) */
+.slider img {
+    max-width: 100px; /* Keep the image within bounds */
+    max-height: 100px; /* Ensure the image fits well */
+    object-fit: contain; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+    display: block;
+    margin: auto; /* Center the image inside the slide */
+    border: 2px solid #ccc; /* Optional: add a border around the image */
+}
+
+/*====================product/blog code================*/
+/* Section Title */
+#product-title {
+    color: #333;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Product Card */
+.product-card {
+    border: none;
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.product-card:hover {
+    transform: translateY(-8px); /* Lift card on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Slightly darker shadow */
+}
+
+/* Product Image */
+.product-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+/* Product Name Styling */
+.product-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.product-link {
+    color: #333;
+    text-decoration: none;
+}
+
+.product-link:hover {
+    color: #007bff; /* Color change on hover */
+    text-decoration: none;
+}
+
+/* Product Description */
+.product-description {
+    text-align: justify;
+    color: #666;
+}
+
+/* Button Styling */
+.product-btn {
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.product-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/*===============about section==============*/
+
+/* Section Background */
+#about-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+/* About Content */
+
+
+/* About Section */
+#about-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    margin-top: 30px;
+}
+
+/* About Content */
+.about-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Title */
+.about-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+/* Description */
+.about-description {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Image Container */
+.about-image-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Limit max height for large images */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 1.5rem;
+    }
+
+    .about-description {
+        font-size: 0.95rem;
+    }
+
+    .about-image {
+        max-height: 300px; /* Reduce image size for small screens */
+    }
+}
+
+/*===================search code=================*/
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #333; /* Dark background color */
+    border-radius: 5px;
+    width: 300px; /* Adjust width as needed */
+    margin-bottom:20px!important;
+}
+
+.search-container input {
+    border: none;
+    padding: 10px;
+    width: 100%;
+    color: #fff; /* Text color */
+    background-color: #333; /* Same background as container */
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.search-container input::placeholder {
+    color: #ccc; /* Placeholder text color */
+}
+
+.search-container button {
+    background-color: #4285F4; /* Button color */
+    border: none;
+    padding: 10px 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.search-container button i {
+    color: white;
+}
+
+

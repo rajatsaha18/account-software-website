@@ -19,8 +19,8 @@
                 <div class="container">
                     <div class="row">
                         <h4 class="text-center text-success">{{ Session::get('message') }}</h4>
-                        <div class="col-md-6 mx-auto">
-                            <div class="card">
+                        <div class="col-md-8 mx-auto">
+                            <div class="card shadow-lg">
                                 <div class="card-header text-center">Site Setting</div>
                                 <div class="card-body">
                                     <form action="{{ route('sitesetting.new') }}" method="POST" enctype="multipart/form-data">
@@ -28,37 +28,36 @@
 
                                         <div class="form-group mb-3">
                                             <label for="">Logo</label>
-                                            <input type="file" name="logo" class="form-control"/>
-                                            @if (isset($data))
-                                            <img src="{{ asset($data->logo) }}" alt="sitesetting-image" style="height: 80px; width:80px;"/>
-
+                                            <input type="file" name="image" class="form-control"/>
+                                            @if ($data)
+                                            <img src="{{ asset($data->image) }}" alt="logo" style="width: 80px"/>
+                                            @endif
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="">Facebook</label>
+                                            @if ($data)
+                                            <input type="text" value="{{ $data->facebook }}" name="facebook" class="form-control"/>
+                                            @else
+                                            <input type="text" name="facebook" class="form-control"/>
                                             @endif
 
                                         </div>
                                         <div class="form-group mb-3">
-                                            <label for="">Facebook Link</label>
-                                            <input type="text" value="{{ isset($data->facebook) ? $data->facebook : '' }}" name="facebook" class="form-control"/>
-
-
-                                            {{-- @if (isset($siteSetting))
-                                            <input type="text" value="{{ $siteSetting->facebook }}" name="facebook" class="form-control"/>
+                                            <label for="">Twitter</label>
+                                            @if ($data)
+                                            <input type="text" value="{{ $data->twitter }}" name="twitter" class="form-control"/>
                                             @else
-
-
-                                            @endif --}}
-
-                                        </div>
-                                        <div class="form-group mb-3">
-                                            <label for="">Twitter Link</label>
-                                            <input type="text" value="{{ isset($data->twitter) ? $data->twitter : '' }}" name="twitter" class="form-control"/>
-
-
+                                            <input type="text" name="twitter" class="form-control"/>
+                                            @endif
 
                                         </div>
                                         <div class="form-group mb-3">
-                                            <label for="">Linkedin Link</label>
-                                            <input type="text" value="{{ isset($data->linkedin) ? $data->linkedin : ''}}" name="linkedin" class="form-control"/>
-
+                                            <label for="">Linkedin</label>
+                                            @if ($data)
+                                            <input type="text" value="{{ $data->linkedin }}" name="linkedin" class="form-control"/>
+                                            @else
+                                            <input type="text" name="linkedin" class="form-control"/>
+                                            @endif
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for=""></label>

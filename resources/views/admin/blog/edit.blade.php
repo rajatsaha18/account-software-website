@@ -18,12 +18,11 @@ Edit Blog
             <section class="py-2">
                 <div class="container">
                     <div class="row">
-                        <h4 class="text-center text-success">{{ Session::get('message') }}</h4>
-                        <div class="col-md-6 mx-auto">
+                        <div class="col-md-8 mx-auto">
                             <div class="text-end">
                                 <a href="{{ route('blog.manage') }}" class="btn btn-success mb-2">Manage Blog</a>
                             </div>
-                            <div class="card">
+                            <div class="card shadow-lg">
                                 <div class="card-header">Edit Blog</div>
                                 <div class="card-body">
                                     <form action="{{ route('blog.update',$blog->id) }}" method="POST" enctype="multipart/form-data">

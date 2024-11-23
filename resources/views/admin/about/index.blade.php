@@ -19,8 +19,8 @@ About
                 <div class="container">
                     <div class="row">
                         <h4 class="text-center text-success">{{ Session::get('message') }}</h4>
-                        <div class="col-md-6 mx-auto">
-                            <div class="card">
+                        <div class="col-md-8 mx-auto">
+                            <div class="card shadow-lg">
                                 <div class="card-header text-center">About</div>
                                 <div class="card-body">
                                     <form action="{{ route('about.new') }}" method="POST" enctype="multipart/form-data">

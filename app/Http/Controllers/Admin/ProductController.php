@@ -21,6 +21,10 @@ class ProductController extends Controller
 
     public function newProduct(Request $request)
     {
+        $request->validate([
+            'name'  => 'required',
+            'image' => 'required',
+        ]);
         Product::newProduct($request);
         return redirect()->route('product.manage')->with('message', 'product create successfully');
     }
@@ -32,7 +36,7 @@ class ProductController extends Controller
     public function update(Request $request,$id)
     {
         Product::updateProduct($request,$id);
-        return redirect()->route('product.manage')->with('message', 'product create successfully');
+        return redirect()->route('product.manage')->with('message', 'product Update successfully');
 
     }
     public function delete($id)

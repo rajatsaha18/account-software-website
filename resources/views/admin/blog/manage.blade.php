@@ -19,7 +19,6 @@ Add Blog
             <section>
                 <div class="container">
                     <div class="row">
-                        <h4 class="text-center text-success">{{ Session::get('message') }}</h4>
                         <div class="col-md-12 mx-auto">
                             <div class="text-end">
                                 <a href="{{ route('blog.add') }}" class="btn btn-success mb-2">Add Blog</a>

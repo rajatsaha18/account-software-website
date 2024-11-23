@@ -14,8 +14,7 @@
                 <a href="{{ isset($footer->facebook) ? $footer->facebook : '' }}" class="text-light me-3"><i class="fab fa-facebook"></i></a>
                 <a href="{{ isset($footer->twitter) ? $footer->twitter : '' }}" class="text-light me-3"><i class="fab fa-twitter"></i></a>
                 <a href="{{ isset($footer->linkedin) ? $footer->linkedin : '' }}" class="text-light me-3"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="text-light me-3">Privacy Policy</a>
-                <a href="#" class="text-light">Terms of Service</a>
+
             </div>
         </div>
     </div>

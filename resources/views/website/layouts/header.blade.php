@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-color">
     <div class="container-fluid">
         @php
-            $siteSettings = DB::table('site_settings')->first();
+            $siteSettings = DB::table('new_site_settings')->first();
         @endphp
       <a class="navbar-brand text_color" href="{{ route('home') }}">
-        <img src="{{ asset($siteSettings->logo) }}" alt="" style="height: 45px; width:45px;">
+        <img src="{{ asset($siteSettings->image) }}" alt="" style="height: 45px; width:45px; object-fit:cover;">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
